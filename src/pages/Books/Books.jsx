@@ -16,7 +16,7 @@ const Books = ({data}) => {
 
     return (
         <div>
-            <h3 className='text-3xl text-center p-7'>hi am books </h3>
+            <h3 className='text-3xl text-center p-7'>Books </h3>
             <Suspense fallback={<span> loading.... </span>}>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4  mx-auto md:px-0  '>
               {
