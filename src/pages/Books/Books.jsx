@@ -3,17 +3,6 @@ import Book from '../Book/Book';
 
 const Books = ({data}) => {
 
-
-    // useEffect(()=> {
-    //     fetch("bookData.json").then(res => res.json())
-    //     .then(data => {
-    //         console.log(data)
-    //     } )
-    // },
-    //  [])
-    // const booksPromise
-    //     = fetch('./bookData.json').then(res => res.json())
-
     return (
         <div>
             <h3 className='text-3xl text-center p-7'>Books </h3>
