@@ -1,14 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router';
+import {  NavLink,  } from 'react-router';
+import './navbar.css'
 
 const Navbar = () => {
 
     const links = <>
+<div className='lg:flex style_nav '>
+    
+<NavLink to="/"> <li className='m-2 font-bold'>Home</li></NavLink>
+        <NavLink to='/about'> <li className='m-2 font-bold'> About</li> </NavLink>
+        <NavLink to="/readList"> <li className='m-2 font-bold'> ReadList</li> </NavLink>
+</div>
 
-<Link to="/"> <li className='m-2'>Home</li></Link>
-<Link to='/about'> <li className='m-2'> About</li> </Link>
-
-         </>
+    </>
 
     return (
         <div>
@@ -21,15 +25,15 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                         {links}
+                            {links}
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">Book Vide</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-               {links}     
-             
+                        {links}
+
                     </ul>
                 </div>
                 <div className="navbar-end">

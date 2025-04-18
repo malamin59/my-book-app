@@ -1,21 +1,27 @@
 
 import { FaStarHalfAlt } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
+
 
 const Book = ({ singleBook }) => {
   // console.log(singleBook)
   const { bookName, category, bookId, rating, image, publisher, tags, yearOfPublishing } = singleBook
 
   return (
-    <Link to={`/booksDetails/${bookId}`}>
-      <div className="card bg-base-100 shadow-sm border p-4">
+    <NavLink 
+    
+    to={`/booksDetails/${bookId}`}>
+
+      <div
+      
+      className="card  bg-base-100 shadow-sm border  p-4">
         <figure className='p-4 bg-gray-100 w-2/3 mx-auto '>
           <img className='h-[166px] rounded '
             src={image}
             alt="Shoes" />
         </figure>
         <div className="card-body">
-          <div className="flex  justify-between mr-19">
+          <div className="flex justify-between mr-19">
             {
               tags.map(tag => <button className="text-green-500  ">{tag}</button>)
             }
@@ -35,7 +41,7 @@ const Book = ({ singleBook }) => {
           </div>
         </div>
       </div>
-    </Link>
+    </NavLink>
   );
 };
 
